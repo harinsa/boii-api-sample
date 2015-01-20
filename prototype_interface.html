@@ -1,0 +1,51 @@
+<head>
+  <title>prototype_interface</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+  
+  <div class="menus">
+  	<h1>Menu</h1>
+  	<div class="form">
+	  	<form class="menuForm">
+	  		<label for="name"> Name </label>
+	  		<input type="text" value="" placeholder="New Menu Name" name="name"/>
+
+	  		<label for="price"> Price </label>
+	  		<input type="text" value="" placeholder="price" name="price"/>
+
+	  		<input type="submit" value="Create new Menu"/>
+	  	</form>
+  	</div>
+
+	  
+	  <ul>
+	  {{#each menus}}
+	  	<li>{{name}},{{price}}</li>
+	  {{/each}}
+	  </ul>
+
+  </div>
+  <div class="orders">
+	  <h1>Order</h1>
+
+	  <div class="form">
+	  	<form class="orderForm">
+	  		<label for="name"> Name </label>
+	  		<input type="text" value="" placeholder="New Menu Name" name="name"/>
+
+	  		<label for="quantity"> Quantity </label>
+	  		<input type="text" value="" placeholder="price" name="quantity"/>
+
+	  		<input type="submit" value="Place order"/>
+	  	</form>
+  	</div>
+	  <ul>
+	  {{#each orders}}
+	  	<li>{{name}}, {{quantity}}</li>
+	  {{/each}}
+	  </ul>
+  </div>
+</body>
+
